@@ -18,7 +18,7 @@
 
 ```yaml
     1. Inference Baseline Qwen2VL-7B-Instruct AWQ
-        score: 0.617
+        score: 0.31
         prompt: <Return only value>What is the {entity_name} of this product?
 
     2. Finetuning
@@ -27,25 +27,18 @@
             postprocessing:
                 a.Replaced Range with NA:
                     - Invalid units replaced with NA
-                    - score: 0.678
+                    - score: 0.54
                 b.Replaced range with Max Value:
-                    - score: 0.677
+                    - score: 0.52
 
         b. 20k Samples with Cosine Scheduler
             Inference Results:
-                - score: 0.679
+                - score: 0.559
             FineTuned on Curated 1600 samples:
-                - score: 0.865
+                - score: 0.61
                 - lr_scheduler: reduce-lr-on-plateau
                 
-            FineTuned on 20k samples:
-                - Preprocessing: 
-                    - Replace Range with Max value
-                    - Remove entity values with invalid units
-
-                - FineTuned on Curated 1600 Samples:
-                    - score: 
-                    - lr_scheduler: reduce-lr-on-plateau
+            
                     
     3. Data Curation
         - Missing {entity_value} replaced with NA
@@ -60,5 +53,3 @@
         -- finetuning method: qlora-8bit
         
 ```
- 
-
