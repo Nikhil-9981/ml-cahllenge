@@ -31,7 +31,7 @@
                 b.Replaced range with Max Value:
                     - score: 0.52
 
-        b. 20k Samples with Cosine Scheduler
+        b. 15k Samples with Cosine Scheduler
             Inference Results:
                 - score: 0.559
             FineTuned on Curated 1600 samples:
